@@ -23606,6 +23606,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8853772496452429027, guid: 18a049ffad8fb464fa842046079358de, type: 3}
+      propertyPath: lineShowTimer
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853772496452429027, guid: 18a049ffad8fb464fa842046079358de, type: 3}
+      propertyPath: rayImpactPrefab
+      value: 
+      objectReference: {fileID: 4925196993687285188, guid: a548696d44803614ab21c842c8ca9357, type: 3}
+    - target: {fileID: 8853772496452429027, guid: 18a049ffad8fb464fa842046079358de, type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
