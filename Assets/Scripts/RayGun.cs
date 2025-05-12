@@ -24,9 +24,20 @@ public class RayGun : MonoBehaviour
             {
                 //stop the ray
                 endPoint = hit.point;
-                Quaternion rayImpactRotation = Quaternion.LookRotation(-hit.normal);
-                GameObject rayImpact = Instantiate(rayImpactPrefab, hit.point, rayImpactRotation);
-                Destroy(rayImpact, 1f);
+                GhostMove ghost = hit.transform.gameObject.GetComponentInParent<GhostMove>();
+
+                if (ghost != null)
+                {
+                    // Kill the ghost
+                    hit.collider.enabled = false;
+                    ghost.Kill();
+                }
+                else
+                {
+                    Quaternion rayImpactRotation = Quaternion.LookRotation(-hit.normal);
+                    GameObject rayImpact = Instantiate(rayImpactPrefab, hit.point, rayImpactRotation);
+                    Destroy(rayImpact, 1f);
+                }
             }
             else
             {
