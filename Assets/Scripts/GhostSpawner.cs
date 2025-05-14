@@ -12,6 +12,8 @@ public class GhostSpawner : MonoBehaviour
     public MRUKAnchor.SceneLabels spawnLabels;
     public float normalOffset = -1.5f;
     
+    public GameManager gameManager;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,7 +26,9 @@ public class GhostSpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(spawnInterval);
             SpawnGhost();
-            ghostCount--;                        
+            ghostCount--;
+            gameManager.ghostsNumber++;
+            gameManager.UpdateUI();
         }
     }
 

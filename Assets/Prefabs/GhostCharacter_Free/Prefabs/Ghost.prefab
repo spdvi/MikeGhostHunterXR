@@ -195,6 +195,7 @@ MonoBehaviour:
   agent: {fileID: 4368033287284182689}
   speed: 1
   animator: {fileID: 2069234913439815857}
+  gameManager: {fileID: 0}
 --- !u!137 &839705036205447455 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 514471462265150744, guid: 46f311046d2104da8b56be3d0a49a119, type: 3}
